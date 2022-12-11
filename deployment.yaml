@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: javadeployment
+ name: javadeployment-preprod
 spec:
  strategy:
    type: RollingUpdate
  replicas: 2
  selector:
    matchLabels:
-     app: frontend01
+     app: Pre-Prod-frontend01
  template:
    metadata:
     name: javaPod
     labels:
-      app: frontend01
+      app: Pre-Prod-frontend01
    spec:
     containers:
     - name: myjava
