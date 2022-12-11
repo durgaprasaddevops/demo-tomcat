@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myfrontend-javaservice
+  name: myfrontend-javaProd
 spec:
   type: NodePort
   ports:
@@ -9,4 +9,4 @@ spec:
       targetPort: 8080
       nodePort: 30001
   selector:
-    app: frontend01
+    app: frontend02
